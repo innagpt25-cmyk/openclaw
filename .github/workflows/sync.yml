@@ -23,4 +23,5 @@ jobs:
         run: |
           git config --global user.email "you@example.com"
           git config --global user.name "INA74"
-          git push --force https://user:${HF_TOKEN}@huggingface.co/spaces/INA74/my-openclaw main
+          git remote add hf https://user:${HF_TOKEN}@huggingface.co/spaces/INA74/my-openclaw || true
+          git push --force hf main
